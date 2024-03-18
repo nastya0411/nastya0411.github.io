@@ -4,94 +4,91 @@ import second from "./images/catalog/2.png";
 import third from "./images/catalog/3.png";
 import forth from "./images/catalog/4.png";
 
-function Pagination()
-{
-    const cardsData = [
-        {
-            img: first,
-            name: "Luxurious Elixir Rough",
-            price: 20200
-
-        },
-        {
-            img: second,
-            name: "The Golden Legacy",
-            price: 16000
-
-        },
-        {
-            img: third,
-            name: "Luxurious Elixir",
-            price: 25000
-
-        },
-        {
-            img: forth,
-            name: "Luxurious Essence",
-            price: 16000
-
-        },
-        {
-            img: first,
-            name: "Luxurious Elixir Rough",
-            price: 20200
-
-        },
-        {
-            img: second,
-            name: "The Golden Legacy",
-            price: 16000
-
-        },
-        {
-            img: third,
-            name: "Luxurious Elixir",
-            price: 25000
-
-        },
-        {
-            img: forth,
-            name: "Luxurious Essence",
-            price: 16000
-
-        },
-        {
-            img: third,
-            name: "Luxurious Elixir",
-            price: 25000
-
-        },
-        {
-            img: forth,
-            name: "Luxurious Essence",
-            price: 16000
-
-        },
-    ]
-
-    const formatter = new Intl.NumberFormat('ru-RU', {
-        style: 'currency',
-        currency: 'RUB',
-    });
-
-    let page = 4;
-    let pageCounter = Math.ceil(cardsData.length / page);
-    console.log("Pages: " + pageCounter);
-
-    for(let j = 0; j < pageCounter; j++)
+const cardsData = [
     {
-        for (let i = 0; i < page; i++)
-        {
-            <Card name = {cardsData[i].name} img = {cardsData[i].img} price = {formatter.format(cardsData[i].price)}/>
-        }
-    }
+        img: first,
+        name: "Luxurious Elixir Rough",
+        price: 20200
+
+    },
+    {
+        img: second,
+        name: "The Golden Legacy",
+        price: 16000
+
+    },
+    {
+        img: third,
+        name: "Luxurious Elixir",
+        price: 25000
+
+    },
+    {
+        img: forth,
+        name: "Luxurious Essence",
+        price: 16000
+
+    },
+    {
+        img: first,
+        name: "Luxurious Elixir Rough",
+        price: 20200
+
+    },
+    {
+        img: second,
+        name: "The Golden Legacy",
+        price: 16000
+
+    },
+    {
+        img: third,
+        name: "Luxurious Elixir",
+        price: 25000
+
+    },
+    {
+        img: forth,
+        name: "Luxurious Essence",
+        price: 16000
+
+    },
+    {
+        img: third,
+        name: "Luxurious Elixir",
+        price: 25000
+
+    },
+    {
+        img: forth,
+        name: "Luxurious Essence",
+        price: 16000
+
+    },
+]
+
+const formatter = new Intl.NumberFormat('ru-RU', {
+    style: 'currency',
+    currency: 'RUB',
+});
+
+function Pages({firstPage, lastPage})
+{
+    const cards = cardsData.slice(firstPage,lastPage).map((elem, i) => { return <Card img={elem.img} price={formatter.format(elem.price)} name={elem.name} key={i} /> })
+    return(
+        <div className = "flex gap-7">
+            {cards}
+        </div>
+    );
 }
 
 function Cards()
 {
     return(
-        <Carousel className="rounded-xl">
-            <Pagination />
+        <Carousel className="rounded-xl" navigation={() => (<div></div>)}>
+            <Pages firstPage = {0} lastPage = {4}/>
+            <Pages firstPage = {4} lastPage = {8}/>
+            <Pages firstPage = {8} lastPage = {10}/>
         </Carousel>
     );
 }
@@ -99,10 +96,10 @@ function Cards()
 function Card({img, name, price})
 {
     return(
-        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-[20px]">
-            <img className = "w-[200px]" src = {img} alt = "картиночки"/>
+        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 h-[370px]">
+            <img className = "w-[185px]" src = {img} alt = "картиночки"/>
             <p className = "text-white">{name}</p>
-            <div className = "flex gap-[10px]">
+            <div className = "flex gap-2.5">
                 <p className = "text-mainOrange">{price}</p>
                 <p className = "text-white">100ml</p>
             </div> 
