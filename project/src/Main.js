@@ -3,6 +3,7 @@ import Cards from './Card';
 import bottleMain from "./images/bottleMain.png";
 import './App.css';
 import bottleAbout from './images/bottleAbout.png'
+import Gallery from './Gallery';
 
 function Main()
 {
@@ -18,19 +19,32 @@ function Main()
           <img className = "w-[500px]" src = {bottleMain} alt = "бутылка"/>
         </div>
         <div className = "bg-black flex flex-col items-center gap-[30px] pb-[50px]">
-          <p className = "text-mainOrange text-7xl tracking-[.4rem]">Акции</p>
-          <div className='w-[1000px]'>
+          <p className = "text-mainOrange text-7xl tracking-[.4rem]">Хиты продаж</p>
+          <div className='w-[1100px]'>
             <Cards />
           </div>
         </div>
-        <div className='flex gap-[100px]   bg-[url(images/VectorAbout1.png)]'>
+        <div className='flex gap-[120px]   bg-[url(images/VectorAbout1.png)]'>
           <img src = {bottleAbout} alt = 'о нас бутылка'/>
           <div className=' flex flex-col items-center gap-7 w-[700px]'>
             <p className = 'text-white text-7xl'>О нас</p>
-            <p className = 'text-white text-4xl tracking-[.4rem]'>Добро пожаловать в мир Mon Parfum - ваш источник роскошных ароматов и непревзойденного качества!<br></br><br></br>Мы гордимся тем, что предлагаем только самые
+            <p className = 'text-white text-4xl tracking-[.45rem] indent-24 text-center'>Добро пожаловать в мир Mon Parfum - ваш источник роскошных ароматов и непревзойденного качества!<br></br><br></br>Мы гордимся тем, что предлагаем только самые
             изысканные ароматы от ведущих мировых брендов. Каждая бутылочка наполнена не только элегантностью и стилем, но и неповторимым шармом, способным подчеркнуть 
             вашу уникальность!</p>
         </div>
+        </div>
+          <div className=' flex flex-col items-center gap-7 w-full bg-[url(images/welcome.png)] py-[180px] px-[300px] text-center'>
+            <p className = 'text-mainOrange text-7xl'>Познакомтесь с миром ароматов </p>
+            <p className = 'text-white text-2xl tracking-[.4rem] indent-24'>Добро пожаловать в Mon parfum, где дух победы и триумфа оживает благодаря ароматам, которые придают силы и 
+            вдохновляют. Наша коллекции - это праздник успеха, призванный раскрыть вашу победоносную сущность. Насладитесь сладким вкусом триумфа с пленительными ароматами, рассказывающими о 
+            ваших достижениях. В Mon parfum мы считаем, что каждая победа заслуживает фирменного аромата, и мы стремимся создавать незабываемые ароматы, которые поднимут ваш дух и придадут сил 
+            вашему путешествию.</p>
+        </div>
+        <div className = "bg-black flex flex-col items-center gap-[30px] pb-[50px]">
+          <p className = "text-mainOrange text-7xl tracking-[.4rem]">Подборки ароматов</p>
+          <div className='w-[1750px]'>
+            <Gallery />
+          </div>
         </div>
       </main>
     );
