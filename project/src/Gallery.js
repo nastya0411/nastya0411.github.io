@@ -5,50 +5,45 @@ import season from "./images/gallery/season.png";
 import east from "./images/gallery/arabFunny.jpg";
 import limit from "./images/gallery/limited.png";
 import daily from "./images/gallery/everyday.png";
+import woman from "./images/gallery/woman.jpg";
+import man from "./images/gallery/man.jpg";
+import './Gallery.css';
 
 function Gallery()
 {
     return (
-      <div className="grid grid-cols-2 ">
+      <div className="grid grid-cols-3 gap-14 fade-out-siblings">
             <div>
-                <img className="object-cover  w-[650px] " src = {french} alt="бутылка из галереи"/>
-            </div>
-            <div>
-                <img className="object-cover w-[3000px] " src = {gift} alt="бутылка из галереи"/>
+                <img className="object-cover" src = {french} alt="бутылка из галереи"/>
             </div>
             <div>
-                <img className="object-cover object-center" src = {wood} alt="бутылка из галереи"/>
+                <img className="object-cover" src = {gift} alt="бутылка из галереи"/>
+            </div> 
+            <div>
+                
+            <img className="object-cover" src = {woman} alt="бутылка из галереи"/>
             </div>
             <div>
-                <img className="object-cover object-center" src = {season} alt="бутылка из галереи"/>
-            </div>
-            <div className = 'grid grid-cols-2' >
-                <img className="object-cover object-center" src = {east} alt="бутылка из галереи"/>
-                <img className="object-cover object-center" src = {limit} alt="бутылка из галереи"/>
+                <img className="object-cover" src = {wood} alt="бутылка из галереи"/>
             </div>
             <div>
-                <img className="object-cover object-center" src = {daily} alt="бутылка из галереи"/>
+                <img className="object-cover" src = {season} alt="бутылка из галереи"/>
+            </div> 
+            <div>
+                <img className="object-cover" src = {man} alt="бутылка из галереи"/>
             </div>
-
-        
-            {/* <div className="w=[660px]">
-            <Image className = 'h-[660px]' src = {french}/></div>
-            <Image src = {gift}/>
-            <Image src = {wood}/>
-            <Image src = {season}/>
-            <Image src = {east}/>
-            <Image src = {limit}/>
-            <Image src = {daily}/> */}
+            <div>
+                <img className="object-cover" src = {east} alt="бутылка из галереи"/>
+            </div>
+            <div>
+            <img className="object-cover" src = {limit} alt="бутылка из галереи"/>
+            </div>
+            <div>
+                <img className="object-cover" src = {daily} alt="бутылка из галереи"/>
+            </div>
       </div>
     );
 }
-// function Image({src})
-// {
-//     return(
-//         <div>
-//             <img className="object-cover object-center" src = {src} alt="бутылка из галереи"/>
-//         </div>
-//     );
-// }
+
 
 export default Gallery;

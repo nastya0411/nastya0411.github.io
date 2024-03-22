@@ -10,24 +10,24 @@ function Header()
 
     const links = [
         {
-            text: "Услуги",
+            text: "Акции",
             url: "/",
         },
         {
-            text: "Врачи",
+            text: "Каталог",
             url: "/",
         },
         {
             text: "О нас",
-            url: "/contacts",
+            url: "/",
         },
         {
-            text: "Отзывы",
-            url: "/about",
+            text: "Статьи",
+            url: "/",
         },
         {
-            text: "Контакты",
-            url: "/about",
+            text: "Подборки",
+            url: "/",
         },
     ];
     

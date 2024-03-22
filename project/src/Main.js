@@ -14,7 +14,8 @@ function Main()
           <div className = "flex flex-col gap-12 bg-[#00000044] p-[125px]">
             <p className = "text-7xl text-center text-mainOrange tracking-[.4rem]">Ощути гармонию и<br></br>роскошь</p>
             <p className = "text-3xl text-center text-white">Mon parfum - твой личный проводник в мир<br></br>изысканных араматов</p>
-            <button type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl"><p className = "flex w-full place-self-center text-white">Каталог</p></button>
+            <button type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+              <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Каталог</p></button>
           </div>
           <img className = "w-[500px]" src = {bottleMain} alt = "бутылка"/>
         </div>
@@ -28,7 +29,8 @@ function Main()
           <img src = {bottleAbout} alt = 'о нас бутылка'/>
           <div className=' flex flex-col items-center gap-7 w-[700px]'>
             <p className = 'text-white text-7xl'>О нас</p>
-            <p className = 'text-white text-4xl tracking-[.45rem] indent-24 text-center'>Добро пожаловать в мир Mon Parfum - ваш источник роскошных ароматов и непревзойденного качества!<br></br><br></br>Мы гордимся тем, что предлагаем только самые
+            <p className = 'text-white text-4xl tracking-[.45rem] indent-24 text-center'>Добро пожаловать в мир Mon Parfum - ваш источник роскошных ароматов и непревзойденного качества!<br>
+            </br><br></br>Мы гордимся тем, что предлагаем только самые
             изысканные ароматы от ведущих мировых брендов. Каждая бутылочка наполнена не только элегантностью и стилем, но и неповторимым шармом, способным подчеркнуть 
             вашу уникальность!</p>
         </div>
@@ -46,8 +48,19 @@ function Main()
             <Gallery />
           </div>
         </div>
+        <div className = "gap-[150px] pb-[45px] flex justify-start bg-[url(images/sale.png)]">
+          <div className = "flex flex-col gap-12 py-[140px] px-[80px]  ">
+            <p className = "text-6xl text-left text-white tracking-[.4rem]">Распродажа парфюмерии!<br></br>СКИДКА до 50%</p>
+            <p className = "text-3xl text-left text-white">Откройте для себя изысканную коллекцию<br></br>
+             парфюмерии премиум-класса по невероятным ценам<br></br>
+              на нашей эксклюзивной парфюмерной распродаже!</p>
+            <button type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+              <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></button>
+          </div>
+        </div>
       </main>
     );
 }
 
 export default Main;
+
