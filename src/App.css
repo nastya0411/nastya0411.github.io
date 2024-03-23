@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "RalewayMed";
+    src: url("./fonts/Raleway-Medium.ttf");
+    letter-spacing: .2rem;
+}
