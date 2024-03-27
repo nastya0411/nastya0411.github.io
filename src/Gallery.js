@@ -8,36 +8,64 @@ import woman from "./images/gallery/woman.jpg";
 import man from "./images/gallery/man.jpg";
 import './Gallery.css';
 
+const parfumCards = [
+    {
+        title: "Французские ароматы",
+        src: french
+    },
+    {
+        title: "Подарочные наборы",
+        src: gift
+    },
+    {
+        title: "Ароматы для неё",
+        src: woman
+    },
+    {
+        title: "Древесные ароматы",
+        src: wood
+    },
+    {
+        title: "Сезонные ароматы",
+        src: season
+    },
+    {
+        title: "Ароматы для него",
+        src: man
+    },
+    {
+        title: "Новые ароматы",
+        src: limit
+    },
+    {
+        title: "На каждый день",
+        src: daily
+    },
+];
+
 function Gallery()
 {
+    const parfumCardsJsx = parfumCards.map((elem, i) => {
+        return <ParfumCard title={elem.title} src={elem.src} key={i} />
+    });
+
     return (
-      <div className="grid grid-cols-4 gap-14 fade-out-siblings">
-            <div>
-                <img className="object-cover" src = {french} alt="бутылка из галереи"/>
-            </div>
-            <div>
-                <img className="object-cover" src = {gift} alt="бутылка из галереи"/>
-            </div> 
-            <div>
-                
-            <img className="object-cover" src = {woman} alt="бутылка из галереи"/>
-            </div>
-            <div>
-                <img className="object-cover" src = {wood} alt="бутылка из галереи"/>
-            </div>
-            <div>
-                <img className="object-cover" src = {season} alt="бутылка из галереи"/>
-            </div> 
-            <div>
-                <img className="object-cover" src = {man} alt="бутылка из галереи"/>
-            </div>
-            <div>
-            <img className="object-cover" src = {limit} alt="бутылка из галереи"/>
-            </div>
-            <div>
-                <img className="object-cover" src = {daily} alt="бутылка из галереи"/>
-            </div>
+        <div className="grid grid-cols-4 gap-14 fade-out-siblings">
+            {parfumCardsJsx}
       </div>
+    );
+}
+
+
+
+function ParfumCard({ title, src }) {
+    return (
+        <div className="relative">
+            <img className="object-cover" src={src} alt="бутылка из галереи"/>
+            <div className = "bg-[#00000044] w-full pt-1 absolute bottom-0 ">
+                <p className="text-white text-2xl tracking-[.2rem] my-1.5">{title}</p>
+            </div>          
+        </div>
     );
 }
 

@@ -68,6 +68,9 @@ function Main()
               <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></button>
           </div>
         </div>
+        <div className = "flex flex-col items-center justify-end w-full bg-cover bg-center py-10 h-[450px] bg-[url(images/footer.png)]">
+          <p className='border-t border-gray-500 text-white w-4/5 rounded-sm text-center text-x0.5'>2024 Mon Parfum. Все права защищены  </p>
+        </div>
       </main>
     );
 }
