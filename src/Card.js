@@ -102,10 +102,10 @@ function Card({img, name, price})
     return(
         <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] ">
             <img  src = {img} alt = "картиночки"/>
-            <p className = "text-white text-center tracking-[.15rem]">{name}</p>
+            <p className = "text-white text-center tracking-[.1rem]">{name}</p>
             <div className = "flex gap-2.5  justify-beetwen">
-                <p className = "text-mainOrange tracking-[.2rem]">{price}</p>
-                <p className = "text-white tracking-[.2rem]">100ml</p>
+                <p className = "text-mainOrange tracking-[.1rem]">{price}</p>
+                <p className = "text-white tracking-[.1rem]">100ml</p>
             </div> 
         </div>
     );

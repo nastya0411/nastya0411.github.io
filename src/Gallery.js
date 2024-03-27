@@ -2,7 +2,6 @@ import french from "./images/gallery/frenchFart.png";
 import gift from "./images/gallery/gift.png";
 import wood from "./images/gallery/woodCum.png";
 import season from "./images/gallery/season.png";
-import east from "./images/gallery/arabFunny.jpg";
 import limit from "./images/gallery/limited.png";
 import daily from "./images/gallery/everyday.png";
 import woman from "./images/gallery/woman.jpg";
@@ -12,7 +11,7 @@ import './Gallery.css';
 function Gallery()
 {
     return (
-      <div className="grid grid-cols-3 gap-14 fade-out-siblings">
+      <div className="grid grid-cols-4 gap-14 fade-out-siblings">
             <div>
                 <img className="object-cover" src = {french} alt="бутылка из галереи"/>
             </div>
@@ -31,9 +30,6 @@ function Gallery()
             </div> 
             <div>
                 <img className="object-cover" src = {man} alt="бутылка из галереи"/>
-            </div>
-            <div>
-                <img className="object-cover" src = {east} alt="бутылка из галереи"/>
             </div>
             <div>
             <img className="object-cover" src = {limit} alt="бутылка из галереи"/>

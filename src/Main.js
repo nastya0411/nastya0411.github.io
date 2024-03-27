@@ -2,7 +2,6 @@ import Header from './Header';
 import Cards from './Card';
 import bottleMain from "./images/bottleMain.png";
 import './App.css';
-import bottleAbout from './images/bottleAbout.png'
 import Gallery from './Gallery';
 
 function Main()
@@ -19,37 +18,38 @@ function Main()
           </div>
           <img className = "w-[500px]" src = {bottleMain} alt = "бутылка"/>
         </div>
-        <div className = "bg-black flex flex-col items-center gap-[30px] pb-[50px]">
-          <p className = "text-mainOrange text-7xl tracking-[.4rem]">Хиты продаж</p>
+        <div className = "bg-black flex flex-col items-center gap-[10px] pb-[30px]">
+          <p className = "text-mainOrange text-7xl tracking-[.4rem] gap-[30px] py-[16px]">Хиты продаж</p>
           <div className='w-[1100px]'>
             <Cards />
           </div>
         </div>
-        <div className='flex gap-[120px]   bg-[url(images/VectorAbout1.png)]'>
-          <img src = {bottleAbout} alt = 'о нас бутылка'/>
-          <div className=' flex flex-col items-center gap-7 w-[700px]'>
-            <p className = 'text-white text-7xl'>О нас</p>
-            <p className = 'text-white text-4xl tracking-[.45rem] indent-24 text-center'>Добро пожаловать в мир Mon Parfum - ваш источник роскошных ароматов и непревзойденного качества!<br>
+        <div className='flex gap-[180px]  bg-[url(images/VectorAbout1.png)]'>
+          <div className='w-[800px] h-[620px] bg-center bg-[url(images/bottleAbout.png)]'>
+          </div>
+          <div className=' flex flex-col items-center justify-between py-[130px] w-[700px] '>
+            <p className = 'text-white text-6xl'>О нас</p>
+            <p className = 'text-white text-xl tracking-[.2rem] indent-24 text-center'>Добро пожаловать в мир Mon Parfum - ваш источник роскошных ароматов и непревзойденного качества!<br>
             </br><br></br>Мы гордимся тем, что предлагаем только самые
             изысканные ароматы от ведущих мировых брендов. Каждая бутылочка наполнена не только элегантностью и стилем, но и неповторимым шармом, способным подчеркнуть 
             вашу уникальность!</p>
         </div>
         </div>
-          <div className=' flex flex-col items-center gap-7 w-full bg-[url(images/welcome.png)] py-[180px] px-[300px] text-center'>
-            <p className = 'text-mainOrange text-7xl'>Познакомтесь с миром ароматов </p>
-            <p className = 'text-white text-2xl tracking-[.4rem] indent-24'>Добро пожаловать в Mon parfum, где дух победы и триумфа оживает благодаря ароматам, которые придают силы и 
+          <div className=' flex flex-col items-center gap-14 w-full  bg-cover bg-center bg-[url(images/welcome.png)] py-[165px] px-[300px] text-center'>
+            <p className = 'text-mainOrange text-6xl'>Познакомтесь с миром ароматов </p>
+            <p className = 'text-white text-xl tracking-[.2rem] indent-24'>Добро пожаловать в Mon parfum, где дух победы и триумфа оживает благодаря ароматам, которые придают силы и 
             вдохновляют. Наша коллекции - это праздник успеха, призванный раскрыть вашу победоносную сущность. Насладитесь сладким вкусом триумфа с пленительными ароматами, рассказывающими о 
             ваших достижениях. В Mon parfum мы считаем, что каждая победа заслуживает фирменного аромата, и мы стремимся создавать незабываемые ароматы, которые поднимут ваш дух и придадут сил 
             вашему путешествию.</p>
         </div>
-        <div className = "bg-black flex flex-col items-center gap-[30px] pb-[50px]">
-          <p className = "text-mainOrange text-7xl tracking-[.4rem]">Подборки ароматов</p>
-          <div className='w-[1750px]'>
+        <div className = "bg-black flex flex-col items-center py-[16px]">
+          <p className = "text-mainOrange text-6xl tracking-[.4rem]">Подборки ароматов</p>
+          <div className='w-[1750px] py-[25px]'>
             <Gallery />
           </div>
         </div>
-        <div className = "gap-[150px] pb-[45px] flex justify-start bg-[url(images/sale.png)]">
-          <div className = "flex flex-col gap-12 py-[140px] px-[80px]  ">
+        <div className = "pb-[45px] flex justify-self-center  bg-cover bg-center bg-[url(images/sale.png)]">
+          <div className = "flex flex-col gap-12 py-[120px] px-[80px]  ">
             {/* Шрифт меньше. Если кажется, что не заметно, то выделить иным способом */}
             <p className = "text-4xl text-left text-white tracking-[.4rem]">Распродажа парфюмерии!
             {/* br самозакрывать там же, где и открыт, можно вот так. Это гораздо читабельней */}

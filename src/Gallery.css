@@ -23,10 +23,3 @@
     transform: scale(1.1);
     opacity: 1;
   }
-  
-  @media (min-width: 40em) {
-    .fade-out-siblings {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-  }

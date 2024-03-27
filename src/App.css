@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "RalewayMed";
-    src: url("./fonts/Raleway-Medium.ttf");
-    letter-spacing: .2rem;
+    font-family: "TenorSans-Regular";
+    src: url("./fonts/TenorSans-Regular.ttf");
+    letter-spacing: .1rem;
+}
+
+body {
+    font-family: "TenorSans-Regular";
 }
