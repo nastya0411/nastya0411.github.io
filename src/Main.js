@@ -69,10 +69,9 @@ function Main()
               <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></button>
           </div>
         </div>
-        <Footer />
+            <Footer />
       </main>
     );
 }
 
 export default Main;
-
