@@ -3,7 +3,7 @@ import search from "./images/search.svg"
 import profile from "./images/profile.svg"
 import liked from "./images/liked.svg"
 import busket from "./images/busket.svg"
-
+import { Link as RouterLink } from "react-router-dom";
 
 function Header()
 {
@@ -15,7 +15,7 @@ function Header()
         },
         {
             text: "Каталог",
-            url: "/",
+            url: "/catalog",
         },
         {
             text: "О нас",
@@ -34,7 +34,6 @@ function Header()
     return(
     
         <header className = "bg-black flex justify-between items-center p-8">
-                    
             <img className = "w-48" src = {logo} alt = "лого"/>
 
             <nav className = "flex gap-[80px] px-32 text-2xl">
@@ -51,9 +50,9 @@ function Header()
 }
 
 function Link({text, url}) {
-    return(
-        <a className = "text-white" href = {url}>{text}</a>
-    );
+  return(
+    <RouterLink className="text-white" to={url}>{text}</RouterLink>
+  );
 }
 
 
