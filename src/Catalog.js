@@ -11,6 +11,7 @@ import tenth from "./images/catalog/10.png";
 import eleventh from "./images/catalog/11.png";
 import twelfth from "./images/catalog/12.png";
 import Header from './Header';
+import Footer from './Footer';
 
 const cardsData = [
   {
@@ -97,12 +98,13 @@ function Catalog()
   return(
     <div className = "font-medium bg-black tracking-[.25rem]">
         <Header />
-        <div className = "flex flex-col items-center py-[16px]">
+        <div className = "flex flex-col items-center py-[16px] pb-5">
           <p className = "text-mainOrange text-6xl tracking-[.4rem] p-3 border-b border-orange-800 rounded-sm w-5/6 text-center">Каталог ароматов</p>
         </div>
         <div>
           {catalogCards()}
         </div>
+        <Footer />
     </div>
   );
   
@@ -115,7 +117,7 @@ function catalogCards()
     });
 
     return (
-        <div className="grid grid-cols-4 gap-14 fade-out-siblings">
+        <div className="grid grid-cols-4 gap-7 fade-out-siblings pb-5 relative">
             {catalogCardsJsx}
       </div>
     );
@@ -133,7 +135,6 @@ function Card({img, name, price})
             </div> 
         </div>
     );
-    
 }
 
 export default Catalog;
