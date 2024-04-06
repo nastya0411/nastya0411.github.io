@@ -1,6 +1,7 @@
 import Header from './Header';
 import Footer from './Footer';
 import first from "./images/catalog/3.png";
+import favourites from "./images/favourites.png"
 import './Rating.css';
 import { useState } from 'react';
 
@@ -46,13 +47,18 @@ function Product() {
               </div>
               <p className='text-mainOrange tracking-[.1rem]'>{formatter.format(25000)}</p>
               <div className="flex items-center">                  
-                <p className = 'text-white pr-2 text-lg font-semibold'>Количество</p>
+                <p className = 'text-white pr-10 text-lg font-semibold'>Количество</p>
                 <div className="flex items-center place-self-center text-white tracking-[.25rem] border-solid border-orange-800 border flex rounded-xl text-2xl ">
                   <p className={'pl-6 py-3 pr-6 rounded-l-xl transition-all' + (count <= 1 ? ' text-gray-600' : ' cursor-pointer hover:bg-orange-800')} onClick={clickMinus}>-</p>
                   <p className='px-4 py-3'>{count}</p>
                   <p className={'pl-6 py-3 pr-6 rounded-r-xl transition-all' + (count >= 10 ? ' text-gray-600' : ' cursor-pointer hover:bg-orange-800')} onClick={clickPlus}>+</p>
                 </div>
+                <p className = 'text-white pr-2 pl-10 text-lg font-semibold'>В избранное</p>
+                <img className = "h-[70px]"src = {favourites} alt = "избранное"/>
               </div>
+              <button type = "button" className = "bg-white py-[15px] px-[70px] flex self-center justify-center rounded-xl text-3xl">
+                <p className = "flex w-full place-self-center text-mainOrange tracking-[.25rem] font-semibold ">В корзину</p>
+              </button>
           </div>
         </div>
         <Footer />
