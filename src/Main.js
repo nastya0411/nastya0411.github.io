@@ -4,18 +4,20 @@ import bottleMain from "./images/bottleMain.png";
 import './App.css';
 import Gallery from './Gallery';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 function Main()
 {
     return(
-        <main className = "font-Med bg-black tracking-[.25rem]" >
+      <main className = "font-Med bg-black tracking-[.25rem]" >
         <Header />
         <div className = "gap-[150px] pb-[45px] w-full flex items-center justify-center h-[850px] bg-[url(images/background.jpg)]">
           <div className = "flex flex-col gap-12 bg-[#00000044] p-[125px]">
             <p className = "text-7xl text-center text-mainOrange tracking-[.4rem]">Ощути гармонию и<br></br>роскошь</p>
             <p className = "text-3xl text-center text-white">Mon parfum - твой личный проводник в мир<br></br>изысканных араматов</p>
-            <button type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
-              <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Каталог</p></button>
+              <Link  to = '/catalog' type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+                <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Каталог</p>
+              </Link>
           </div>
           <img className = "w-[500px]" src = {bottleMain} alt = "бутылка"/>
         </div>
@@ -69,7 +71,7 @@ function Main()
               <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></button>
           </div>
         </div>
-            <Footer />
+        <Footer />
       </main>
     );
 }

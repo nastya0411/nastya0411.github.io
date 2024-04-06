@@ -12,6 +12,7 @@ import eleventh from "./images/catalog/11.png";
 import twelfth from "./images/catalog/12.png";
 import Header from './Header';
 import Footer from './Footer';
+import { Link as RouterLink } from "react-router-dom";
 
 const cardsData = [
   {
@@ -117,7 +118,7 @@ function catalogCards()
     });
 
     return (
-        <div className="grid grid-cols-4 gap-7 fade-out-siblings pb-5 relative">
+        <div className="grid grid-cols-4 gap-7 fade-out-siblings pb-5 relative flex justify-items-center px-80">
             {catalogCardsJsx}
       </div>
     );
@@ -126,14 +127,16 @@ function catalogCards()
 function Card({img, name, price})
 {
     return(
-        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] ">
+      <RouterLink to = '/product'>
+        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] self-center">
             <img  src = {img} alt = "картиночки"/>
             <p className = "text-white text-center tracking-[.1rem]">{name}</p>
-            <div className = "flex gap-2.5  justify-beetwen">
+              <div className = "flex gap-2.5  justify-beetwen">
                 <p className = "text-mainOrange tracking-[.1rem]">{price}</p>
                 <p className = "text-white tracking-[.1rem]">100ml</p>
             </div> 
         </div>
+      </RouterLink>
     );
 }
 

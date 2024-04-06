@@ -3,16 +3,15 @@ import vk from "./images/socialmedia/vk.png"
 import tg from "./images/socialmedia/tg.png"
 import mail from "./images/socialmedia/mail.png"
 import whatsapp from "./images/socialmedia/whatsapp.png"
+import { Link as RouterLink } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop"
+
 
 function Footer() {
     const links = [
         {
-            text: "Акции",
-            url: "/",
-        },
-        {
             text: "Каталог",
-            url: "/",
+            url: "/catalog",
         },
         {
             text: "О нас",
@@ -26,7 +25,8 @@ function Footer() {
     return(
         <div className = "w-full bg-cover bg-center bg-[url(images/footer.png)] pt-8 ">  
             <div  className="px-40 flex flex-col gap-7">
-                <img className = "w-48 flex flex-col" src = {logo} alt = "лого"/>
+            <ScrollToTop /> 
+            <RouterLink to = '/#top'><img className = "w-48 flex flex-col" src = {logo} alt = "лого"/></RouterLink>
                 <p className = "text-2xl text-left text-white tracking-[.4rem] font-semibold">Подпишитесь на нашу рассылку новостей:</p>
                 <p className = "text-lg text-left text-white tracking-[.4rem]">Получайте обновления о новых поступлениях и <br /> специальных предложениях!</p>
                 <div className="grid grid-cols-2">

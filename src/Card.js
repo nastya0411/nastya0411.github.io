@@ -3,6 +3,10 @@ import first from "./images/catalog/1.png";
 import second from "./images/catalog/2.png";
 import third from "./images/catalog/3.png";
 import forth from "./images/catalog/4.png";
+import fifth from "./images/catalog/5.png";
+import sixth from "./images/catalog/6.png";
+import seventh from "./images/catalog/7.png";
+import eighth from "./images/catalog/8.png";
 
 const cardsData = [
     {
@@ -30,40 +34,28 @@ const cardsData = [
 
     },
     {
-        img: first,
-        name: "Luxurious Elixir Rough",
-        price: 20200
-
+        img: fifth,
+        name: "Aurum Aura",
+        price: 24300
+  
     },
     {
-        img: second,
-        name: "The Golden Legacy",
-        price: 16000
-
+        img: sixth,
+        name: "Gleaming Gilt",
+        price: 17500
+  
     },
     {
-        img: third,
-        name: "Luxurious Elixir",
-        price: 25000
-
+        img: seventh,
+        name: "Gilded Elixir Rough",
+        price: 24500
+  
     },
     {
-        img: forth,
-        name: "Luxurious Essence",
-        price: 16000
-
-    },
-    {
-        img: third,
-        name: "Luxurious Elixir",
-        price: 25000
-
-    },
-    {
-        img: forth,
-        name: "Luxurious Essence",
-        price: 16000
-
+        img: eighth,
+        name: "Golden Luminary",
+        price: 18500
+  
     },
 ]
 
@@ -92,7 +84,6 @@ function Cards()
         <Carousel className="rounded-xl" navigation={() => (<div></div>)}>
             <Pages firstPage = {0} lastPage = {4}/>
             <Pages firstPage = {4} lastPage = {8}/>
-            <Pages firstPage = {8} lastPage = {10}/>
         </Carousel>
     );
 }
