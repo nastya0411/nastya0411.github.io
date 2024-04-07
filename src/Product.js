@@ -1,9 +1,14 @@
 import Header from './Header';
 import Footer from './Footer';
 import first from "./images/catalog/3.png";
-import favourites from "./images/favourites.png"
+import favourites from "./images/favourites.svg"
 import './Rating.css';
 import { useState } from 'react';
+import fruits from './images/notes/fruits.png'
+import roses from './images/notes/roses.png'
+import amber from './images/notes/amber.png'
+import jackline from './images/socialmedia/jackline.png'
+import andry from './images/socialmedia/andry.png'
 
 const formatter = new Intl.NumberFormat('ru-RU', {
   style: 'currency',
@@ -53,14 +58,77 @@ function Product() {
                   <p className='px-4 py-3'>{count}</p>
                   <p className={'pl-6 py-3 pr-6 rounded-r-xl transition-all' + (count >= 10 ? ' text-gray-600' : ' cursor-pointer hover:bg-orange-800')} onClick={clickPlus}>+</p>
                 </div>
-                <p className = 'text-white pr-2 pl-10 text-lg font-semibold'>В избранное</p>
-                <img className = "h-[70px]"src = {favourites} alt = "избранное"/>
+                  <p className = 'text-white pr-2 pl-10 text-lg font-semibold '>В избранное</p>
+                  <img className = "h-[70px] cursor-pointer hover:bg-orange-800"src = {favourites} alt = "избранное"/>
               </div>
-              <button type = "button" className = "bg-white py-[15px] px-[70px] flex self-center justify-center rounded-xl text-3xl">
-                <p className = "flex w-full place-self-center text-mainOrange tracking-[.25rem] font-semibold ">В корзину</p>
-              </button>
-          </div>
+                  <button type = "button" className = "bg-white py-[15px] px-[70px] flex self-center justify-center rounded-xl text-3xl">
+                    <p className = "flex w-full place-self-center text-mainOrange tracking-[.25rem] font-semibold ">В корзину</p>
+                  </button>
+              </div>
         </div>
+          <div className = 'text-white flex items-start pt-8 flex-col gap-10'>
+            <p className = 'text-3xl font-semibold pl-60 '>Информация о продукте</p>
+            <p className = ' text-xl pl-60 '>Этот эликсир открывается великолепным аккордом сияющих цитрусовых и поцелованных<br /> солнцем фруктов, напоминающим о золотых лучах, выражающих 
+            ваши чувства. <br />Восхитительный аромат раскрывается букетом бархатистых роз и редких цветов,<br /> их эссенция излучается очарованием позолоченных лепестков. 
+             Когда парфюм оседает,<br /> роскошная смесь теплой амбры, сливочной ванили и мягкого сандалового дерева вызывает <br />ощущение абсолютной роскоши и утонченности.</p>
+             <p className = 'text-3xl font-semibold pl-60 '>Ноты аромата</p>
+              <div className='grid grid-cols-3 text-center pl-32  '>
+                <div className='flex flex-col justify-between items-center'>
+                  <p className = 'text-3xl'>Верхние ноты</p>
+                  <p className = 'text-2xl'>Апельсин, виноград, яблоко</p>
+                  <img className = "h-64"src = {fruits} alt = "фрукты"/>
+                </div>
+                <div className='flex flex-col justify-between items-center'>
+                  <p className = 'text-3xl'>Средние ноты</p>
+                  <p className = 'text-2xl'>Белые розы, жасмин</p>
+                  <img className = "h-64"src = {roses} alt = "розы"/>
+                </div>
+                <div className='flex flex-col justify-between items-center'>
+                  <p className = 'text-3xl'>Базовые ноты</p>
+                  <p className = 'text-2xl'>Амбра, ваниль, сандаловое дерево</p>
+                  <img className = "h-64"src = {amber} alt = "амбра"/>
+                </div>
+              </div>
+          </div>
+          <div className=' justify-between items-center pt-40'>
+            <p className = 'text-mainOrange text-4xl font-semibold text-center'>Отзывы</p>
+          </div>
+            <div className='text-white flex  pl-60 flex flex-col pb-5'>
+              <div className='flex items-left '>
+              <img className = "h-10 w-10"src = {andry} alt = "андрей"/>
+                <div className="rating-result py-3 pl-5 ">
+                          <span className="active"></span>
+                          <span className="active"></span>    
+                          <span className="active"></span>  
+                          <span className="active"></span>
+                          <span className="active"></span></div>
+                </div>
+                <p className = ' text-xl'>Очень приятный аромат. Рекомендую тем, кто ищет сочетание сладости и элегантности в парфюмерии.<br />
+                Мне нравятся цветочные духи, а этот аромат прекрасен. Я доволен покупкой. Отличный подарок <br /> для моей девушки.</p>
+                <div className='flex gap-20'>
+                  <p className = 'text-base pt-5'>Андрей Петров</p>
+                  <p className = 'text-base pt-5'>05 Января, 2023</p>
+                </div>
+              </div>
+              <div className='text-white flex  pl-60 flex flex-col pb-20'>
+              <div className='flex items-left '>
+              <img className = "h-10 w-10"src = {jackline} alt = "жаклин"/>
+                <div className="rating-result py-3 pl-5 ">
+                          <span className="active"></span>
+                          <span className="active"></span>    
+                          <span className="active"></span>  
+                          <span className="active"></span>
+                          <span className="active"></span></div>
+                </div>
+                <p className = ' text-xl'>Обожаю легкие ароматы, а этот просто прелесть, он не навязчивый. Приятный аромат. Пользуюсь<br /> каждый день.</p>
+                <div className='flex gap-20'>
+                  <p className = 'text-base pt-5'>Жаклин Ширак</p>
+                  <p className = 'text-base pt-5'>03 Июля, 2023</p>
+                </div>
+              </div>
+            
+          
+
         <Footer />
     </div>
   );
@@ -68,3 +136,4 @@ function Product() {
 }
 
 export default Product;
+

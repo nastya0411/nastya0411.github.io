@@ -7,6 +7,7 @@ import fifth from "./images/catalog/5.png";
 import sixth from "./images/catalog/6.png";
 import seventh from "./images/catalog/7.png";
 import eighth from "./images/catalog/8.png";
+import { Link as RouterLink } from "react-router-dom";
 
 const cardsData = [
     {
@@ -91,6 +92,7 @@ function Cards()
 function Card({img, name, price})
 {
     return(
+        <RouterLink to = '/product'>
         <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] ">
             <img  src = {img} alt = "картиночки"/>
             <p className = "text-white text-center tracking-[.1rem]">{name}</p>
@@ -99,6 +101,7 @@ function Card({img, name, price})
                 <p className = "text-white tracking-[.1rem]">100ml</p>
             </div> 
         </div>
+        </RouterLink>
     );
 }
 

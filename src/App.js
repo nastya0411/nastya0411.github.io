@@ -5,6 +5,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Product from "./Product";
+import Authorization from "./Authorization";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/product",
     element: <Product />,
+  },
+  {
+    path: "/authorization",
+    element: <Authorization />,
   },
 ]);
 
