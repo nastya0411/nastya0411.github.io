@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Product from "./Product";
 import Authorization from "./Authorization";
+import About from "./About";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/authorization",
     element: <Authorization />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

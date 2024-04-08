@@ -1,6 +1,5 @@
 import logo from "./images/logo.png"
 import profile from "./images/profile.svg"
-import liked from "./images/liked.svg"
 import busket from "./images/busket.svg"
 import { Link as RouterLink } from "react-router-dom";
 
@@ -14,7 +13,7 @@ function Header()
         },
         {
             text: "О нас",
-            url: "/",
+            url: "/about",
         },
         {
             text: "Подборки",
@@ -31,7 +30,6 @@ function Header()
                 </nav>
                 <div className = "flex gap-4">
                 <RouterLink to = '/authorization'><img src = {profile} alt = "профиль"/></RouterLink>
-                    <img src = {liked} alt = "избранное"/>
                     <img src = {busket} alt = "корзина"/>
                 </div>
             </header>
