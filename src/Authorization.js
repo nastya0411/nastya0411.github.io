@@ -1,53 +1,57 @@
 import { Link } from "react-router-dom";
+import Header from './Header';
+import Footer from './Footer';
 
 function Authorization(){
     return(
-        <enter className="flex flex-col justify-center items-center py-16 px-20 gap-4">
-            <div className="text-[rgb(135,61,61)] font-bold text-2xl">
+        <div className = "font-medium bg-black tracking-[.25rem] grid gap-y-10 text-white">
+        <Header />
+        <enter className="flex flex-col justify-center items-center py-10 gap-2">
+            <div className="text-mainOrange font-bold text-4xl tracking-[.4rem] px-[825px]">
                 РЕГИСТРАЦИЯ
             </div>
-            <div className="gap-6">
-                <form className="flex flex-col gap-2">
+            <div className="gap-6 flex justify-center items-center">
+                <form className="flex flex-col gap-6">
                     <div className="flex flex-row gap-2">
-                        <input type="text" className="p-4 w-[188px] border bg-white rounded-lg" placeholder="Имя" />
-                        <input type="text" className="p-4 w-[188px] border bg-white rounded-lg" placeholder="Фамилия" />
+                        <input type="text" className="p-4 w-[250px] bg-gray-900 rounded-lg tracking-[.2rem] font-semibold" placeholder="Имя" />
+                        <input type="text" className="p-4 w-[250px] bg-gray-900 rounded-lg tracking-[.2rem] font-semibold" placeholder="Фамилия" />
                     </div>
-                    <input type="email" className="p-4 w-96 border bg-white rounded-lg" placeholder="Электронный адрес" />
-                    <input type="password" className="p-4 w-96 border bg-white rounded-lg" placeholder="Пароль" />
-                        <div className="flex justify-start text-xs pl-1 text-[rgb(40,41,44)] ">
-                            Пароль должен состоять хотя бы из 6 символов
+                    <input type="email" className="p-4 w-[508px] bg-gray-900 rounded-lg tracking-[.2rem] font-semibold" placeholder="Электронный адрес" />
+                    <input type="password" className="p-4 w-[508px] bg-gray-900 rounded-lg tracking-[.2rem] font-semibold" placeholder="Пароль" />
+                        <div className="flex justify-start text-lg px-1 text-center  tracking-[.4rem]">
+                            Пароль должен состоять хотя бы <br /> из 6 символов
                         </div>
-                    <input type="password" className="p-4 w-96 border bg-white rounded-lg" placeholder="Повторите пароль" />
-                        <div className="flex justify-start text-xs pl-1 text-[rgb(40,41,44)]">
-                            Пароль должен состоять хотя бы из 6 символов
-                        </div>
+                    <input type="password" className="p-4 w-[508px] bg-gray-900 rounded-lg tracking-[.2rem] font-semibold" placeholder="Повторите пароль" />
                 </form>
             </div>
-            <div className="flex flex-col justify-center items-center text-xs pl-1 text-[rgb(40,41,44)]">
+            <div className="flex flex-col justify-center items-center tracking-[.4rem] font-semibold px-1 text-lg gap-2  pt-6">
                 Регистрируясь, Вы соглашаетесь с
-                <div className="flex flex-row gap-2">
-                    <input type="checkbox" className="p-4" placeholder="Условиями и Политикой конфиденциальности"/>
-                        <Link to="/politica">Условиями</Link>и<Link to="/politica">Политикой конфиденциальности</Link>
+                <div className="flex flex-row gap-5">
+                    <input type="checkbox" className="p-" placeholder="Условиями и Политикой конфиденциальности"/>
+                        <Link to="/politica">Условиями</Link>и<Link to="/politica">Политикой конфиденциальности.</Link>
                 </div>
             </div>
-            <div className="flex justify-center">
-                <button className="w-64 p-4 border border-solid border-black rounded-lg 
-                    hover:bg-[rgb(135,61,61)] hover:text-white hover:border-transparent hover:ease-in-out duration-300">
+            <div className="flex justify-center py-6">
+                <button className="w-84 p-4 border hover:bg-mainOrange hover:text-white hover:border-transparent hover:ease-in-out duration-300 rounded-xl text-2xl tracking-[.25rem] ">
                     <Link to="/reg">
                         Зарегистрироваться
                     </Link>
                 </button>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center px-1  text-center text-lg tracking-[.4rem] ">
                 Уже зарегистрированны?
-                <div className="text-[rgb(135,61,61)] underline underline-offset-2 cursor-pointer">
+                <div className="text-mainOrange underline underline-offset-2 cursor-pointer tracking-[.4rem] px-1 py-6 text-center text-2xl font-semibold">
                     <Link to="/enter">
                         Войти
                     </Link>
                 </div>
             </div>
         </enter>
+        <Footer />
+    </div>
     )
 }
+
+
 
 export default Authorization;

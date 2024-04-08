@@ -7,6 +7,8 @@ import {
 import Product from "./Product";
 import Authorization from "./Authorization";
 import About from "./About";
+import LogIn from "./LogIn";
+
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/enter",
+    element: <LogIn />,
   },
 ]);
 
