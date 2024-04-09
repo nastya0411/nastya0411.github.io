@@ -15,7 +15,7 @@ function Footer() {
         },
         {
             text: "О нас",
-            url: "/",
+            url: "/about",
         },
         {
             text: "Подборки",

@@ -67,8 +67,8 @@ function Main()
               {/* Можно создать специальные стили, которые будут наследовать несколько стилей css. */}
               {/* К примеру, для шрифта, которому ты хочешь задать и размер шрифта и tracking, то лучше прописывать это в css. */}
               {/* https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */}
-            <button type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
-              <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></button>
+              <Link  to = '/catalog' type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+              <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></Link>
           </div>
         </div>
         <Footer />

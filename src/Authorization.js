@@ -24,11 +24,11 @@ function Authorization(){
                     <input type="password" className="p-4 w-[508px] bg-gray-900 rounded-lg tracking-[.2rem] font-semibold" placeholder="Повторите пароль" />
                 </form>
             </div>
-            <div className="flex flex-col justify-center items-center tracking-[.4rem] font-semibold px-1 text-lg gap-2  pt-6">
+            <div className="flex flex-col justify-center items-center tracking-[.4rem]  px-1 text-lg gap-2  pt-6">
                 Регистрируясь, Вы соглашаетесь с
                 <div className="flex flex-row gap-5">
                     <input type="checkbox" className="p-" placeholder="Условиями и Политикой конфиденциальности"/>
-                        <Link to="/politica">Условиями</Link>и<Link to="/politica">Политикой конфиденциальности.</Link>
+                        <Link to="/">Условиями</Link>и<Link to="/">Политикой конфиденциальности.</Link>
                 </div>
             </div>
             <div className="flex justify-center py-6">
@@ -40,7 +40,7 @@ function Authorization(){
             </div>
             <div className="flex flex-col justify-center items-center px-1  text-center text-lg tracking-[.4rem] ">
                 Уже зарегистрированны?
-                <div className="text-mainOrange underline underline-offset-2 cursor-pointer tracking-[.4rem] px-1 py-6 text-center text-2xl font-semibold">
+                <div className="text-mainOrange underline underline-offset-8 cursor-pointer tracking-[.4rem] px-1 py-6 text-center text-2xl font-semibold">
                     <Link to="/enter">
                         Войти
                     </Link>

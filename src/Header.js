@@ -29,8 +29,8 @@ function Header()
                     {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
                 </nav>
                 <div className = "flex gap-4">
-                <RouterLink to = '/authorization'><img src = {profile} alt = "профиль"/></RouterLink>
-                    <img src = {busket} alt = "корзина"/>
+                <RouterLink to = '/enter'><img src = {profile} alt = "профиль"/></RouterLink>
+                <RouterLink to = '/basket'><img src = {busket} alt = "корзина"/></RouterLink>
                 </div>
             </header>
             <div className="pt-28" id="top" />

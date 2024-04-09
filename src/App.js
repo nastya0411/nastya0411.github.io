@@ -8,6 +8,7 @@ import Product from "./Product";
 import Authorization from "./Authorization";
 import About from "./About";
 import LogIn from "./LogIn";
+import Basket from "./Basket";
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/enter",
     element: <LogIn />,
+  },
+  {
+    path: "/basket",
+    element: <Basket />,
   },
 ]);
 
