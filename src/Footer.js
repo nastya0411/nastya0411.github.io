@@ -19,7 +19,7 @@ function Footer() {
         },
         {
             text: "Подборки",
-            url: "/",
+            url: "/compilation",
         },
     ];
     return(

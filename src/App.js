@@ -9,6 +9,7 @@ import Authorization from "./Authorization";
 import About from "./About";
 import LogIn from "./LogIn";
 import Basket from "./Basket";
+import Сompilation from './Сompilation';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/basket",
     element: <Basket />,
+  },
+  {
+    path: "/compilation",
+    element: <Сompilation />,
   },
 ]);
 

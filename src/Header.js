@@ -17,7 +17,7 @@ function Header()
         },
         {
             text: "Подборки",
-            url: "/",
+            url: "/compilation",
         },
     ];
     
