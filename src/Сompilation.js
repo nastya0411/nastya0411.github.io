@@ -1,7 +1,14 @@
 import Header from './Header';
 import Footer from './Footer';
 import first from "./images/catalog/1.png";
+import second from "./images/catalog/2.png";
+import third from "./images/catalog/3.png";
+import { Link } from 'react-router-dom';
 
+const formatter = new Intl.NumberFormat('ru-RU', {
+    style: 'currency',
+    currency: 'RUB',
+  });
 
 function Сompilation(){
     return(
@@ -10,7 +17,7 @@ function Сompilation(){
             <div className = "flex flex-col items-center py-[16px] pb-5">
                 <p className = "text-mainOrange text-6xl tracking-[.4rem] p-3 border-b border-orange-800 rounded-sm w-5/6 text-center">Подборки ароматов</p>
             </div>
-                <div className="flex justify-space-around border-black border-b gap-28 justify-center items-center px-64 h-44 py-5">
+                <div className="flex justify-space-around gap-28 justify-center items-center px-64 h-44 py-5 ">
                     <div className="flex justify-center">
                         <img src={first} className="h-64 cursor-pointer" alt="x" />
                     </div>
@@ -19,9 +26,39 @@ function Сompilation(){
                         <p>Средние ноты Белые розы, жасмин</p>
                         <p>Базовые ноты: амбра, ваниль, сандаловое дерево</p>
                     </div>
-                    <div><p className='text-white text-4xl tracking-[.1rem]'>25000</p></div>
-                    <div><p className='text-white text-4xl tracking-[.1rem]'>25000</p></div>
-            </div>
+                    <div><p className='text-mainOrange text-4xl tracking-[.1rem]'>{formatter.format(25000)}</p></div>
+                    <div><Link  to = '/product' type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+                        <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></Link>
+                    </div>
+                </div>
+                <div className="flex justify-space-around gap-28 justify-center items-center px-64 h-44 py-5 ">
+                    <div className="flex justify-center">
+                        <img src={second} className="h-64 cursor-pointer" alt="x" />
+                    </div>
+                    <div className='flex flex-col text-left mt-5 text-lg'>
+                        <p>Верхние ноты: апельсин, виноград, яблоко</p>
+                        <p>Средние ноты Белые розы, жасмин</p>
+                        <p>Базовые ноты: амбра, ваниль, сандаловое дерево</p>
+                    </div>
+                    <div><p className='text-mainOrange text-4xl tracking-[.1rem]'>{formatter.format(27500)}</p></div>
+                    <div><Link  to = '/product' type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+                        <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></Link>
+                    </div>
+                </div>
+                <div className="flex justify-space-around gap-28 justify-center items-center px-64 h-44 py-5">
+                    <div className="flex justify-center">
+                        <img src={third} className="h-64 cursor-pointer" alt="x" />
+                    </div>
+                    <div className='flex flex-col text-left mt-5 text-lg'>
+                        <p>Верхние ноты: апельсин, виноград, яблоко</p>
+                        <p>Средние ноты Белые розы, жасмин</p>
+                        <p>Базовые ноты: амбра, ваниль, сандаловое дерево</p>
+                    </div>
+                    <div><p className='text-mainOrange text-4xl tracking-[.1rem]'>{formatter.format(22700)}</p></div>
+                    <div><Link  to = '/product' type = "button" className = "bg-mainOrange py-[15px] px-[30px] flex self-center justify-center rounded-xl text-2xl">
+                        <p className = "flex w-full place-self-center text-white tracking-[.25rem]">Подробнее</p></Link>
+                    </div>
+                </div>
         <Footer />
         </div>
     )
