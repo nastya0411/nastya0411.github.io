@@ -7,6 +7,7 @@ import daily from "./images/gallery/everyday.png";
 import woman from "./images/gallery/woman.jpg";
 import man from "./images/gallery/man.jpg";
 import './Gallery.css';
+import { Link as RouterLink } from "react-router-dom";
 
 const parfumCards = [
     {
@@ -60,12 +61,14 @@ function Gallery()
 
 function ParfumCard({ title, src }) {
     return (
+        <RouterLink to = '/compilation'>
         <div className="relative">
             <img className="object-cover" src={src} alt="бутылка из галереи"/>
             <div className = "bg-[#00000044] w-full pt-1 absolute bottom-0 ">
                 <p className="text-white text-2xl tracking-[.2rem] my-1.5">{title}</p>
             </div>          
         </div>
+        </RouterLink>
     );
 }
 

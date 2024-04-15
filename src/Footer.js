@@ -6,6 +6,9 @@ import whatsapp from "./images/socialmedia/whatsapp.png"
 import { Link as RouterLink } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop"
 
+function alr(){
+    alert("Вы подписались на нашу расссылку новостей!");
+  }
 
 function Footer() {
     const links = [
@@ -27,15 +30,15 @@ function Footer() {
             <div  className="px-40 flex flex-col gap-7">
             <ScrollToTop /> 
             <RouterLink to = '/#top'><img className = "w-48 flex flex-col" src = {logo} alt = "лого"/></RouterLink>
-                <p className = "text-2xl text-left text-white tracking-[.4rem] font-semibold">Подпишитесь на нашу рассылку новостей:</p>
-                <p className = "text-lg text-left text-white tracking-[.4rem]">Получайте обновления о новых поступлениях и <br /> специальных предложениях!</p>
+                <p className = "text-2xl text-left text-white tracking-[.4rem]">Подпишитесь на нашу рассылку новостей:</p>
                 <div className="grid grid-cols-2">
                     <div>
                         <form className="flex mt-1">
                             <label className="block w-full">
-                                <input  type="email" name="email" className="focus-visible:outline-none px-3 py-2 bg-gray-900 block w-full h-12 rounded-l-lg text-sm text-white tracking-[.2rem] font-semibold" placeholder="Введите вашу почту"/>
+                                <input  type="email" name="email" className="focus-visible:outline-none px-3 py-2 bg-gray-900 block w-full h-12 rounded-l-lg 
+                                text-sm text-white tracking-[.2rem] font-semibold" placeholder="Введите вашу почту"/>
                             </label>
-                            <button type = "button" className = "bg-mainOrange px-3 py-2 h-12 rounded-r-lg text-lg text-white tracking-[.25rem]">Отправить</button>
+                            <button onClick={alr} type = "button" className = "bg-mainOrange px-3 py-2 h-12 rounded-r-lg text-lg text-white tracking-[.25rem]">Отправить</button>
                         </form>      
                     </div>
                     <div className="object-left ">
@@ -55,7 +58,8 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center "><p className='p-7 border-t border-gray-500 text-white w-4/5 rounded-sm text-center text-base '>2024 Mon Parfum. Все права защищены </p></div>
+            <div className="flex flex-col items-center "><p className='p-7 border-t border-gray-500 text-white w-4/5 rounded-sm text-center 
+            text-base '>2024 Mon Parfum. Все права защищены </p></div>
         </div>
     );
  

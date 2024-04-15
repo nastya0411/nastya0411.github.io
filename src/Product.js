@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
-import first from "./images/catalog/3.png";
+import fourth from "./images/catalog/4.png";
 import './Rating.css';
 import { useState } from 'react';
 import fruits from './images/notes/fruits.png'
@@ -35,7 +35,7 @@ function Product() {
         <Header />
         <div className='flex'>
           <div className='object-contain -mt-20 ps-72'>
-            <img className = "w-[600px]" src = {first} alt = "продукт"/>
+            <img className = "w-[600px]" src = {fourth} alt = "продукт"/>
           </div>
           <div className=' flex flex-col justify-items-start w-[700px] gap-10 tracking-[.2rem] pt-20'>
               <p className = 'text-white text-4xl font-semibold'>Luxurious Elixir</p>

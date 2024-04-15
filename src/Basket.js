@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from './Header';
 import Footer from './Footer';
-import first from "./images/catalog/3.png";
+import first from "./images/catalog/3.webp";
 
 const formatter = new Intl.NumberFormat('ru-RU', {
     style: 'currency',

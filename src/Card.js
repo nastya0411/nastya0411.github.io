@@ -1,7 +1,7 @@
 import { Carousel } from "@material-tailwind/react";
 import first from "./images/catalog/1.png";
 import second from "./images/catalog/2.png";
-import third from "./images/catalog/3.png";
+import third from "./images/catalog/3.webp";
 import forth from "./images/catalog/4.png";
 import fifth from "./images/catalog/5.png";
 import sixth from "./images/catalog/6.png";
