@@ -113,8 +113,13 @@ function Catalog()
   return(
     <div className = "font-medium bg-black tracking-[.25rem]">
         <Header />
+        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-96 grid gap-x-30 flex flex-row">
+          <p >Главная</p>
+          <p >  </p>
+          <p >Каталог ароматов</p>
+        </div>
         <div className = "flex flex-col items-center py-[16px] pb-5">
-          <p className = "text-mainOrange text-6xl tracking-[.4rem] p-3 border-b border-orange-800 rounded-sm w-5/6 text-center">Каталог ароматов</p>
+          <p>Каталог ароматов</p>
         </div>
         <div>
           {catalogCards()}

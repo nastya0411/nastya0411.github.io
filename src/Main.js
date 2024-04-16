@@ -11,7 +11,7 @@ function Main()
   return(
     <main className = "font-Med bg-black tracking-[.25rem]" >
       <Header />
-      <div className = "gap-[150px] pb-[45px] w-full flex items-center justify-center h-[850px] bg-[url(images/background.jpg)]">
+      <div className = "gap-[150px] pb-[45px] w-full hidden md:flex items-center justify-center h-[850px] bg-[url(images/background.jpg)]">
         <div className = "flex flex-col gap-12 bg-[#00000044] p-[125px]">
           <p className = "text-7xl text-center text-mainOrange tracking-[.4rem]">Ощути гармонию и<br></br>роскошь</p>
           <p className = "text-3xl text-center text-white">Mon parfum - твой личный проводник в мир<br></br>изысканных араматов</p>

@@ -19,7 +19,7 @@ function Header()
         },
         {
             text: "Подборки",
-            url: "/compilation",
+            url: "/podbor",
         },
     ];
     let { cart } = useContext(CartContext);
@@ -38,7 +38,7 @@ function Header()
                 </div>
             </header>
             <div className="pt-28" id="top" />
-        </>
+        </> 
     );
 }
 

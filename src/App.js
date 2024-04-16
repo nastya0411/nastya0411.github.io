@@ -10,6 +10,7 @@ import About from "./About";
 import LogIn from "./LogIn";
 import Basket from "./Basket";
 import Сompilation from './Сompilation';
+import Podbor from './Podbor';
 import CartContextProvider from "./contexts/CartContextProvider";
 
 
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "/compilation",
     element: <Сompilation />,
+  },
+  {
+    path: "/podbor",
+    element: <Podbor />,
   },
 ]);
 
