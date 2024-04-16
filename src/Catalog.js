@@ -13,8 +13,7 @@ import twelfth from "./images/catalog/12.png";
 import Header from './Header';
 import Footer from './Footer';
 import { Link as RouterLink } from "react-router-dom";
-import { useContext } from "react";
-import { CartContext } from "./contexts/CartContextProvider";
+
 
 const cardsData = [
   {
@@ -145,25 +144,17 @@ function catalogCards()
 
 function Card({ card })
 {
-  let { cart, setCart } = useContext(CartContext);
-
-  function handleClick() {
-    cart[card.id] = card;
-    setCart(structuredClone(cart));
-    console.log(cart);
-  }
-
     return(
-      // <RouterLink to = '/product'>
-        <div onClick={handleClick} className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] self-center">
+      <RouterLink to = '/product'>
+        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] self-center">
             <img  src = {card.img} alt = "картиночки"/>
             <p className = "text-white text-center tracking-[.1rem]">{card.name}</p>
               <div className = "flex gap-2.5  justify-beetwen">
                 <p className = "text-mainOrange tracking-[.1rem]">{formatter.format(card.price)}</p>
-                <p className = "text-white tracking-[.1rem]">100ml {Object.keys(cart).length}</p>
+                <p className = "text-white tracking-[.1rem]">100ml</p>
             </div> 
         </div>
-      // </RouterLink>
+      </RouterLink>
     );
 }
 

@@ -8,6 +8,8 @@ import roses from './images/notes/roses.png'
 import amber from './images/notes/amber.png'
 import jackline from './images/socialmedia/jackline.png'
 import andry from './images/socialmedia/andry.png'
+import { useContext } from "react";
+import { CartContext } from "./contexts/CartContextProvider";
 
 const formatter = new Intl.NumberFormat('ru-RU', {
   style: 'currency',
@@ -16,7 +18,19 @@ const formatter = new Intl.NumberFormat('ru-RU', {
 
 function Product() {
 
+  let { cart, setCart } = useContext(CartContext);
+
   const [count, setCount] = useState(1);
+
+  function handleClick() {
+    cart["123"] = {
+      name: "123",
+      title: "123",
+      count: count
+    };
+    setCart(structuredClone(cart));
+    console.log(cart);
+  }
 
   function clickMinus() {
     if (count > 1) {
@@ -58,10 +72,11 @@ function Product() {
                   <p className={'pl-6 py-3 pr-6 rounded-r-xl transition-all' + (count >= 10 ? ' text-gray-600' : ' cursor-pointer hover:bg-orange-800')} onClick={clickPlus}>+</p>
                 </div>
               </div>
-                  <button type = "button" className = "bg-white py-[15px] px-[70px] flex self-center rounded-xl text-3xl">
+                  <button onClick={handleClick}  type = "button" className = "bg-white py-[15px] px-[70px] flex self-center rounded-xl text-3xl">
                     <p className = "flex w-full text-mainOrange tracking-[.25rem] font-semibold ">В корзину</p>
                   </button>
               </div>
+              
         </div>
           <div className = 'text-white flex items-start pt-8 flex-col gap-10'>
             <p className = 'text-3xl font-semibold px-60 '>Информация о продукте</p>
