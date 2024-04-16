@@ -10,6 +10,7 @@ import About from "./About";
 import LogIn from "./LogIn";
 import Basket from "./Basket";
 import Сompilation from './Сompilation';
+import CartContextProvider from "./contexts/CartContextProvider";
 
 
 const router = createBrowserRouter([
@@ -49,7 +50,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <CartContextProvider>
+      <RouterProvider router={router} />
+    </CartContextProvider>
   );
 }
 

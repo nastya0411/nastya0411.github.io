@@ -13,75 +13,89 @@ import twelfth from "./images/catalog/12.png";
 import Header from './Header';
 import Footer from './Footer';
 import { Link as RouterLink } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "./contexts/CartContextProvider";
 
 const cardsData = [
   {
+      id: "first",
       img: first,
       name: "Luxurious Elixir Rough",
       price: 20200
 
   },
   {
+      id: "second",
       img: second,
       name: "The Golden Legacy",
       price: 16000
 
   },
   {
+      id: "third",
       img: third,
       name: "Luxurious Elixir",
       price: 25000
 
   },
   {
+      id: "fourth",
       img: fourth,
       name: "Luxurious Essence",
       price: 16000
 
   },
   {
+      id: "fifth",
       img: fifth,
       name: "Aurum Aura",
       price: 24300
 
   },
   {
+      id: "sixth",
       img: sixth,
       name: "Gleaming Gilt",
       price: 17500
 
   },
   {
+      id: "seventh",
       img: seventh,
       name: "Gilded Elixir Rough",
       price: 24500
 
   },
   {
+      id: "eighth",
       img: eighth,
       name: "Golden Luminary",
       price: 18500
 
   },
   {
+      id: "ninth",
       img: ninth,
       name: "Decadent Opal",
       price: 28000
 
   },
   {
+      id: "tenth",
       img: tenth,
       name: "Gilded Elixir",
       price: 19700
 
   },
   {
+    id: "eleventh",
     img: eleventh,
     name: "Glamourous Gilt",
     price: 21000
 
   },
   {
+    id: "twelfth",
     img: twelfth,
     name: "Luxury Enigma",
     price: 14000
@@ -114,7 +128,7 @@ function Catalog()
 function catalogCards()
 {
     const catalogCardsJsx = cardsData.map((elem, i) => {
-      return <Card img={elem.img} price={formatter.format(elem.price)} name={elem.name} key={i} />
+      return <Card card={elem} key={i} />
     });
 
     return (
@@ -124,19 +138,27 @@ function catalogCards()
     );
 }
 
-function Card({img, name, price})
+function Card({ card })
 {
+  let { cart, setCart } = useContext(CartContext);
+
+  function handleClick() {
+    cart[card.id] = card;
+    setCart(structuredClone(cart));
+    console.log(cart);
+  }
+
     return(
-      <RouterLink to = '/product'>
-        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] self-center">
-            <img  src = {img} alt = "картиночки"/>
-            <p className = "text-white text-center tracking-[.1rem]">{name}</p>
+      // <RouterLink to = '/product'>
+        <div onClick={handleClick} className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] self-center">
+            <img  src = {card.img} alt = "картиночки"/>
+            <p className = "text-white text-center tracking-[.1rem]">{card.name}</p>
               <div className = "flex gap-2.5  justify-beetwen">
-                <p className = "text-mainOrange tracking-[.1rem]">{price}</p>
-                <p className = "text-white tracking-[.1rem]">100ml</p>
+                <p className = "text-mainOrange tracking-[.1rem]">{formatter.format(card.price)}</p>
+                <p className = "text-white tracking-[.1rem]">100ml {Object.keys(cart).length}</p>
             </div> 
         </div>
-      </RouterLink>
+      // </RouterLink>
     );
 }
 
