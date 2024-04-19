@@ -30,7 +30,7 @@ function Basket(){
             <div className="flex flex-col items-center pt-5"><p className='p-7 border-t border-mainOrange w-4/5 rounded-sm text-center font-extralight text-3xl'>
             Общая стоимость заказа:</p>
                             <div className=" text-center text-mainOrange text-4xl tracking-[.1rem] ">
-                    {formatter.format(25000 * Object.keys(cart).length)}
+                    <p className='text-white text-4xl tracking-[.1rem]'></p>
                 </div>
             </div>
             <div className="">
@@ -67,6 +67,7 @@ function CartProduct({ cartItem }) {
   }
 
   return (
+
     <div className="flex justify-space-around border-black border-b gap-28 justify-center items-center text-2xl px-1 h-44 py-5">
       <div className="flex justify-center">
           <img src={first} className="h-96 cursor-pointer" alt="x" />
@@ -81,6 +82,8 @@ function CartProduct({ cartItem }) {
       <p className='text-white text-4xl tracking-[.1rem]'>{formatter.format(25000 * count)}</p>
       </div>
     </div>
+
+    
   );
 }
 
