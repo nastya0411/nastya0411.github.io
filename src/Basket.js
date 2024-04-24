@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Header from './Header';
 import Footer from './Footer';
 import first from "./images/catalog/3.webp";
@@ -10,12 +10,12 @@ const formatter = new Intl.NumberFormat('ru-RU', {
   });
 function Basket(){
 
-    let { cart} = useContext(CartContext);
+    let { cart, cartSumm } = useContext(CartContext);
     
     let cartCardsJsx = [];
 
     for (let key of Object.keys(cart)) {
-      cartCardsJsx.push(<CartProduct cartItem={cart[key]} />) ;
+      cartCardsJsx.push(<CartProduct key={key} cartItem={cart[key]} />) ;
     }
     function alr(){
         alert("Ваш заказ оформлен!");
@@ -28,7 +28,7 @@ function Basket(){
             {cartCardsJsx}
           </div>
             <div className="flex flex-col items-center pt-5"><p className='p-7 border-t border-mainOrange w-4/5 rounded-sm text-center font-extralight text-3xl'>
-            Общая стоимость заказа:</p>
+            Общая стоимость заказа:{formatter.format(cartSumm())}</p>
                             <div className=" text-center text-mainOrange text-4xl tracking-[.1rem] ">
                     <p className='text-white text-4xl tracking-[.1rem]'></p>
                 </div>
@@ -52,17 +52,19 @@ function Basket(){
 }
 
 function CartProduct({ cartItem }) {
-  const [count, setCount] = useState(cartItem.count);
+
+  let { cart, setCart } = useContext(CartContext);
   
   function clickMinus() {
-    if (count > 1) {
-      setCount(count - 1);
+    if (cartItem.count > 1) {
+      cart[cartItem.id].count = cartItem.count - 1;
+      setCart(structuredClone(cart));
     }
   }
-
-  function clickPlus(){
-    if (count < 10) {
-      setCount(count + 1);
+  function clickPlus() {
+    if (cartItem.count < 10) {
+      cart[cartItem.id].count = cartItem.count + 1;
+      setCart(structuredClone(cart));
     }
   }
 
@@ -72,14 +74,14 @@ function CartProduct({ cartItem }) {
       <div className="flex justify-center">
           <img src={first} className="h-96 cursor-pointer" alt="x" />
       </div>
-      <div className="text-center">Luxurious Elixir</div>
-      <div className="flex items-center place-self-center  tracking-[.25rem] border-solid border-mainOrange border flex rounded-xl text-2xl ">
-        <p className={'pl-6 py-3 pr-6 rounded-l-xl transition-all' + (count <= 1 ? ' text-gray-600' : ' cursor-pointer hover:bg-mainOrange')} onClick={clickMinus}>-</p>
-        <p className='px-4 py-3'>{count}</p>
-        <p className={'pl-6 py-3 pr-6 rounded-r-xl transition-all' + (count >= 10 ? ' text-gray-600' : ' cursor-pointer hover:bg-mainOrange')} onClick={clickPlus}>+</p>
+      <div className="text-center">{cartItem.title}</div>
+      <div className="flex items-center place-self-center tracking-[.25rem] border-solid border-mainOrange border flex rounded-xl text-2xl ">
+        <p className={'pl-6 py-3 pr-6 rounded-l-xl transition-all' + (cartItem.count <= 1 ? ' text-gray-600' : ' cursor-pointer hover:bg-mainOrange')} onClick={clickMinus}>-</p>
+        <p className='px-4 py-3'>{cartItem.count}</p>
+        <p className={'pl-6 py-3 pr-6 rounded-r-xl transition-all' + (cartItem.count >= 10 ? ' text-gray-600' : ' cursor-pointer hover:bg-mainOrange')} onClick={clickPlus}>+</p>
       </div>
       <div>
-      <p className='text-white text-4xl tracking-[.1rem]'>{formatter.format(25000 * count)}</p>
+      <p className='text-white text-4xl tracking-[.1rem]'>{formatter.format(cartItem.price * cartItem.count)}</p>
       </div>
     </div>
 

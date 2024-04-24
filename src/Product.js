@@ -17,19 +17,21 @@ const formatter = new Intl.NumberFormat('ru-RU', {
 });
 
 function Product() {
+  const [count, setCount] = useState(1);
+
+  let item = {
+    id: 3,
+    title: "Luxurious Elixir",
+    description: "Окунитесь в мир непревзойденной роскоши с Luxurious Elixir, изысканным ароматом, который сплетает чарующую симфонию золота и роскоши. Этот позолоченный эликсир - это праздник изысканности, созданный с использованием лучших эссенций и наполненный очарованием драгоценных золотых оттенков.",
+    price: 25000,
+    count: count,
+  }
 
   let { cart, setCart } = useContext(CartContext);
 
-  const [count, setCount] = useState(1);
-
   function handleClick() {
-    cart["123"] = {
-      name: "123",
-      title: "123",
-      count: count
-    };
+    cart[item.id] = item;
     setCart(structuredClone(cart));
-    console.log(cart);
   }
 
   function clickMinus() {
@@ -51,10 +53,9 @@ function Product() {
           <div className='object-contain -mt-20 ps-72'>
             <img className = "w-[600px]" src = {fourth} alt = "продукт"/>
           </div>
-          <div className=' flex flex-col justify-items-start w-[700px] gap-10 tracking-[.2rem] pt-20'>
-              <p className = 'text-white text-4xl font-semibold'>Luxurious Elixir</p>
-              <p className = 'text-white text-xl'>Окунитесь в мир непревзойденной роскоши с Luxurious Elixir, изысканным ароматом, который сплетает чарующую симфонию золота и роскоши. 
-              Этот позолоченный эликсир - это праздник изысканности, созданный с использованием лучших эссенций и наполненный очарованием драгоценных золотых оттенков.</p>
+          <div className='flex flex-col justify-items-start w-[700px] gap-10 tracking-[.2rem] pt-20'>
+              <p className = 'text-white text-4xl font-semibold'>{item.title}</p>
+              <p className = 'text-white text-xl'>{item.description}</p>
               <div className="rating-result flex items-center">
                       <span className="active"></span>
                       <span className="active"></span>    
@@ -63,7 +64,7 @@ function Product() {
                       <span className="active"></span>
                       <p className = 'text-white text-sm px-2 '>(90) Отзывов и оценок</p>
               </div>
-              <p className='text-mainOrange text-4xl tracking-[.1rem]'>{formatter.format(25000)}</p>
+              <p className='text-mainOrange text-4xl tracking-[.1rem]'>{formatter.format(item.price)}</p>
               <div className="flex items-cente">                  
                 <p className = 'text-white pr-10 text-lg py-5 font-semibold'>Количество</p>
                 <div className="flex items-center place-self-center text-white tracking-[.25rem] border-solid border-orange-800 border flex rounded-xl text-2xl ">
@@ -138,9 +139,6 @@ function Product() {
                   <p className = 'text-base pt-5'>03 Июля, 2023</p>
                 </div>
               </div>
-            
-          
-
         <Footer />
     </div>
   );
