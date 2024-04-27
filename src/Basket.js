@@ -22,13 +22,13 @@ function Basket(){
     }
 
     return(
-        <div className = "font-medium bg-black tracking-[.25rem] grid gap-y-5 text-white">
+        <div className = "font-medium bg-black tracking-[.25rem] grid text-white">
         <Header />
-          <div className="flex flex-col px-20 py-8">
+          <div className="flex flex-col py-8">
             {cartCardsJsx}
           </div>
-            <div className="flex flex-col items-center pt-5"><p className='p-7 border-t border-mainOrange w-4/5 rounded-sm text-center font-extralight text-3xl'>
-            Общая стоимость заказа:{formatter.format(cartSumm())}</p>
+            <div className="flex flex-col items-center pt-1"><p className='p-7 border-t border-mainOrange w-4/5 rounded-sm text-center font-extralight text-3xl'>
+            Общая стоимость заказа: {formatter.format(cartSumm())}</p>
                             <div className=" text-center text-mainOrange text-4xl tracking-[.1rem] ">
                     <p className='text-white text-4xl tracking-[.1rem]'></p>
                 </div>
@@ -39,7 +39,7 @@ function Basket(){
                     <div>
                         <button onClick={alr} className="w-64 p-4 border border-solid border-black rounded-full
                             hover:bg-mainOrange hover:text-white hover:border-transparent hover:ease-in-out duration-300 text-2xl tracking-[.4rem] 
-                            py-[15px] px-[30px] flex self-center justify-center rounded-xl text-4xl flex w-full place-self-center text-white tracking-[.25rem] ">
+                            py-[15px] px-[30px] flex self-center justify-center rounded-xl text-4xl flex w-full place-self-center text-white tracking-[.25rem] mb-8">
                                 Оформить заказ
                         </button>
                     </div>
@@ -70,9 +70,9 @@ function CartProduct({ cartItem }) {
 
   return (
 
-    <div className="flex justify-space-around border-black border-b gap-28 justify-center items-center text-2xl px-1 h-44 py-5">
+    <div className="flex justify-space-around border-black border-b gap-28 my-16 justify-center items-center text-2xl px-1 h-44 py-5">
       <div className="flex justify-center">
-          <img src={first} className="h-96 cursor-pointer" alt="x" />
+          <img src={first} className="h-72 cursor-pointer" alt="x" />
       </div>
       <div className="text-center">{cartItem.title}</div>
       <div className="flex items-center place-self-center tracking-[.25rem] border-solid border-mainOrange border flex rounded-xl text-2xl ">
