@@ -10,6 +10,7 @@ import jackline from './images/socialmedia/jackline.png'
 import andry from './images/socialmedia/andry.png'
 import { useContext } from "react";
 import { CartContext } from "./contexts/CartContextProvider";
+import { Link as RouterLink } from "react-router-dom";
 
 const formatter = new Intl.NumberFormat('ru-RU', {
   style: 'currency',
@@ -21,6 +22,7 @@ function Product() {
 
   let item = {
     id: 3,
+    img: fourth,
     title: "Luxurious Elixir",
     description: "Окунитесь в мир непревзойденной роскоши с Luxurious Elixir, изысканным ароматом, который сплетает чарующую симфонию золота и роскоши. Этот позолоченный эликсир - это праздник изысканности, созданный с использованием лучших эссенций и наполненный очарованием драгоценных золотых оттенков.",
     price: 25000,
@@ -49,11 +51,18 @@ function Product() {
   return(
     <div className = "font-medium bg-black tracking-[.25rem]">
         <Header />
+        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-64 flex flex-row gap-x-9" >
+          <RouterLink to = '/'><p>Главная </p></RouterLink>
+          <p > / </p>
+          <RouterLink to = '/catalog'><p>Каталог</p></RouterLink>
+          <p > / </p>
+          <RouterLink to = '/product'><p >Товар</p></RouterLink>
+        </div>
         <div className='flex'>
-          <div className='object-contain -mt-20 ps-72'>
-            <img className = "w-[600px]" src = {fourth} alt = "продукт"/>
+          <div className='object-contain -mt-2 ps-72'>
+            <img className = "w-[550px]" src = {fourth} alt = "продукт"/>
           </div>
-          <div className='flex flex-col justify-items-start w-[700px] gap-10 tracking-[.2rem] pt-20'>
+          <div className='flex flex-col justify-items-start w-[700px] gap-10 tracking-[.2rem] pt-20 '>
               <p className = 'text-white text-4xl font-semibold'>{item.title}</p>
               <p className = 'text-white text-xl'>{item.description}</p>
               <div className="rating-result flex items-center">

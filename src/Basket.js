@@ -2,7 +2,9 @@ import { useContext } from "react";
 import Header from './Header';
 import Footer from './Footer';
 import first from "./images/catalog/3.webp";
+
 import { CartContext } from "./contexts/CartContextProvider";
+
 
 const formatter = new Intl.NumberFormat('ru-RU', {
     style: 'currency',

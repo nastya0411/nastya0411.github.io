@@ -112,14 +112,16 @@ function Catalog()
   return(
     <div className = "font-medium bg-black tracking-[.25rem]">
         <Header />
-        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-96 grid gap-x-30 flex flex-row">
-          <p >Главная</p>
-          <p >  </p>
-          <p >Каталог ароматов</p>
+        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-64 flex flex-row gap-x-9">
+        <RouterLink to = '/'><p >Главная </p></RouterLink>
+          <p > / </p>
+          <RouterLink to = '/catalog'><p >Каталог</p></RouterLink>
         </div>
-        <div className = "flex flex-col items-center py-[16px] pb-5">
-          <p>Каталог ароматов</p>
+        <div className = "flex flex-col items-center py-[16px] pb-5 text-mainOrange">
+        <p className = "text-mainOrange text-6xl tracking-[.4rem] border-b border-orange-800 rounded-sm w-5/6 text-center p-3 ">Каталог ароматов</p>
         </div>
+        <div></div>
+
         <div>
           {catalogCards()}
         </div>
