@@ -73,7 +73,7 @@ function Pages({firstPage, lastPage})
         }
     );
     return(
-        <div className = "flex gap-7">
+        <div className = "flex justify-around gap-7">
             {cards}
         </div>
     );
@@ -82,10 +82,18 @@ function Pages({firstPage, lastPage})
 function Cards()
 {
     return(
-        <Carousel className="rounded-xl" navigation={() => (<div></div>)}>
-            <Pages firstPage = {0} lastPage = {4}/>
-            <Pages firstPage = {4} lastPage = {8}/>
-        </Carousel>
+        <>
+            <Carousel className="hidden lg:flex" navigation={() => (<div></div>)}>
+                <Pages firstPage = {0} lastPage = {4}/>
+                <Pages firstPage = {4} lastPage = {8}/>
+            </Carousel>
+            <Carousel className="rounded-xl hidden md:flex lg:hidden" navigation={() => (<div></div>)}>
+                <Pages firstPage = {0} lastPage = {2}/>
+                <Pages firstPage = {2} lastPage = {4}/>
+                <Pages firstPage = {4} lastPage = {6}/>
+                <Pages firstPage = {6} lastPage = {8}/>
+            </Carousel>
+        </>
     );
 }
 
@@ -93,14 +101,16 @@ function Card({img, name, price})
 {
     return(
         <RouterLink to = '/product'>
-        <div className = "flex flex-col items-center bg-[#101010] rounded-xl p-5 w-[260px] ">
-            <img  src = {img} alt = "картиночки"/>
-            <p className = "text-white text-center tracking-[.1rem]">{name}</p>
-            <div className = "flex gap-2.5  justify-beetwen">
-                <p className = "text-mainOrange tracking-[.1rem]">{price}</p>
-                <p className = "text-white tracking-[.1rem]">100ml</p>
-            </div> 
-        </div>
+            <div className = "flex flex-col justify-between items-center bg-[#101010] rounded-xl p-5 max-w-[260px] h-full">
+                <img  src = {img} alt = "картиночки"/>
+                <div>
+                    <p className = "text-white text-center tracking-[.1rem]">{name}</p>
+                    <div className = "flex gap-2.5  justify-beetwen">
+                        <p className = "text-mainOrange tracking-[.1rem]">{price}</p>
+                        <p className = "text-white tracking-[.1rem]">100ml</p>
+                    </div>
+                </div> 
+            </div>
         </RouterLink>
     );
 }

@@ -27,11 +27,11 @@ function Footer() {
     ];
     return(
         <div className = "w-full bg-cover bg-center bg-[url(images/footer.png)] pt-8 ">  
-            <div  className="px-40 flex flex-col gap-7">
-            <ScrollToTop /> 
+            <div  className=" px-20 md:px-20 lg:px-40 flex flex-col gap-7">
+            <ScrollToTop />
             <RouterLink to = '/#top'><img className = "w-48 flex flex-col" src = {logo} alt = "лого"/></RouterLink>
                 <p className = "text-2xl text-left text-white tracking-[.4rem]">Подпишитесь на нашу рассылку новостей:</p>
-                <div className="grid grid-cols-2">
+                <div className="flex flex-col">
                     <div>
                         <form className="flex mt-1">
                             <label className="block w-full">
@@ -39,22 +39,18 @@ function Footer() {
                                 text-sm text-white tracking-[.2rem] font-semibold" placeholder="Введите вашу почту"/>
                             </label>
                             <button onClick={alr} type = "button" className = "bg-mainOrange px-3 py-2 h-12 rounded-r-lg text-lg text-white tracking-[.25rem]">Отправить</button>
-                        </form>      
+                        </form>  
                     </div>
-                    <div className="object-left ">
+                    <div className = "flex justify-center gap-4 py-4 ">
+                        <img className="h-16 w-100" src = {vk} alt = "вконтакте"/>
+                        <img className="h-16 w-100" src = {tg} alt = "тг"/>
+                        <img className="h-16 w-100" src = {mail} alt = "мэйл"/>
+                        <img className="h-16 w-100" src = {whatsapp} alt = "вотсап"/>
                     </div>
-                    <div className = " flex justify-between items-center p-8 w-2 px-40 flex flex-col gap-7">
-                        <div className = "flex gap-4">
-                            <img src = {vk} alt = "вконтакте"/>
-                            <img src = {tg} alt = "тг"/>
-                            <img src = {mail} alt = "мэйл"/>
-                            <img src = {whatsapp} alt = "вотсап"/>
-                        </div>
-                    </div>
-                    <div className = "flex justify-between items-center -mt-72">
-                            <nav className = "flex flex-col px-96 text-lg text-left text-white tracking-[.4rem] gap-7">
-                                {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
-                            </nav>
+                    <div className = "flex justify-center items-center pb-3 ">
+                        <nav className = "flex flex-col text-lg text-center text-white tracking-[.4rem] gap-7">
+                            {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
+                        </nav>
                     </div>
                 </div>
             </div>

@@ -26,9 +26,9 @@ function Header()
     
     return(
         <>
-            <header className = "bg-black flex justify-between items-center h-32 md:h-28 lg:h-28  fixed w-full z-10 text-center ">
+            <header className = "bg-black flex justify-around items-center h-32 md:h-28 lg:h-28 fixed w-full z-10 text-center ">
                 <RouterLink to = '/'><img className = "w-48 pl-8" src = {logo} alt = "лого"/></RouterLink>
-                <nav className = "flex gap-[80px] px-32 text-2xl">
+                <nav className = "flex gap-[80px] text-2xl">
                     {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
                 </nav>
                 <div className = "flex gap-4">
