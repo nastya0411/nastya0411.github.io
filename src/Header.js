@@ -4,6 +4,9 @@ import busket from "./images/busket.svg"
 import { Link as RouterLink } from "react-router-dom";
 import { CartContext } from "./contexts/CartContextProvider";
 import { useContext } from "react";
+import React from 'react';
+import BurgerMenu from './BurgerMenu';
+
 
 function Header()
 {
@@ -28,9 +31,14 @@ function Header()
         <>
             <header className = "bg-black flex justify-around items-center h-32 md:h-28 lg:h-28 fixed w-full z-10 text-center ">
                 <RouterLink to = '/'><img className = "w-48 pl-8" src = {logo} alt = "лого"/></RouterLink>
-                <nav className = "flex gap-[80px] text-2xl">
-                    {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
-                </nav>
+                <div className="hidden md:block">
+                    <nav className = "flex gap-[80px] text-2xl px-0 md:px-0 lg:px-96">
+                        {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
+                    </nav>
+                </div>
+                    <div className="flex sm:inline-flex md:hidden lg:hidden">
+                        <BurgerMenu />
+                    </div>
                 <div className = "flex gap-4">
                 <RouterLink to = '/enter'><img src = {profile} alt = "профиль"/></RouterLink>
                 <RouterLink to = '/basket'><img src = {busket} alt = "корзина"/></RouterLink>
@@ -47,6 +55,8 @@ function Link({text, url}) {
     <RouterLink className="text-white" to={url}>{text}</RouterLink>
   );
 }
+
+
 
 
 export default Header;
