@@ -51,7 +51,7 @@ function Product() {
   return(
     <div className = "font-medium bg-black tracking-[.25rem]">
         <Header />
-        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-64 flex flex-row gap-x-9" >
+        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-20 md:px-64 lg:px-64 flex flex-row gap-x-9 pt-5" >
           <RouterLink to = '/'><p>Главная </p></RouterLink>
           <p > / </p>
           <RouterLink to = '/catalog'><p>Каталог</p></RouterLink>
@@ -59,8 +59,8 @@ function Product() {
           <RouterLink to = '/product'><p >Товар</p></RouterLink>
         </div>
         <div className='flex'>
-          <div className='object-contain -mt-2 ps-72'>
-            <img className = "w-[550px]" src = {fourth} alt = "продукт"/>
+          <div className='object-contain -mt-2 ps-2 md:ps-20 lg:ps-72'>
+            <img className = "w-[750px] md:w-[850px] lg:w-[550px] " src = {fourth} alt = "продукт"/>
           </div>
           <div className='flex flex-col justify-items-start w-[700px] gap-10 tracking-[.2rem] pt-20 '>
               <p className = 'text-white text-4xl font-semibold'>{item.title}</p>
@@ -82,19 +82,19 @@ function Product() {
                   <p className={'pl-6 py-3 pr-6 rounded-r-xl transition-all' + (count >= 10 ? ' text-gray-600' : ' cursor-pointer hover:bg-orange-800')} onClick={clickPlus}>+</p>
                 </div>
               </div>
-                  <button onClick={handleClick}  type = "button" className = "bg-white py-[15px] px-[70px] flex self-center rounded-xl text-3xl">
+                  <button onClick={handleClick}  type = "button" className = "bg-white py-[15px]  px-[70px] md:px-[30px] lg:px-[70px] flex self-center rounded-xl text-3xl">
                     <p className = "flex w-full text-mainOrange tracking-[.25rem] font-semibold ">В корзину</p>
                   </button>
               </div>
               
         </div>
           <div className = 'text-white flex items-start pt-8 flex-col gap-10'>
-            <p className = 'text-3xl font-semibold px-60 '>Информация о продукте</p>
-            <p className = ' text-xl pl-60 '>Этот эликсир открывается великолепным аккордом сияющих цитрусовых и поцелованных<br /> солнцем фруктов, напоминающим о золотых лучах, выражающих 
+            <p className = 'text-3xl font-semibold px-32 md:px-60 lg:px-60 '>Информация о продукте</p>
+            <p className = ' text-xl pl-16 md:pl-16 lg:pl-60'>Этот эликсир открывается великолепным аккордом сияющих цитрусовых и поцелованных<br /> солнцем фруктов, напоминающим о золотых лучах, выражающих 
             ваши чувства. <br />Восхитительный аромат раскрывается букетом бархатистых роз и редких цветов,<br /> их эссенция излучается очарованием позолоченных лепестков. 
              Когда парфюм оседает,<br /> роскошная смесь теплой амбры, сливочной ванили и мягкого сандалового дерева вызывает <br />ощущение абсолютной роскоши и утонченности.</p>
-             <p className = 'text-3xl font-semibold px-60'>Ноты аромата</p>
-              <div className='grid grid-cols-3 text-center px-60'>
+             <p className = 'text-3xl font-semibold px-56 md:px-80 lg:px-60'>Ноты аромата</p>
+              <div className='grid grid-cols-3 text-center px-0 md:px-16 lg:px-60 gap-x-7 md:gap-x-4 lg:gap-x-0'>
                 <div className='flex flex-col justify-between items-center'>
                   <p className = 'text-3xl'>Верхние ноты</p>
                   <p className = 'text-2xl'>Апельсин, виноград, яблоко</p>
@@ -112,10 +112,10 @@ function Product() {
                 </div>
               </div>
           </div>
-          <div className=' justify-between items-center pt-40'>
+          <div className=' justify-between items-center pt-10 md:pt-10 lg:pt-40'>
             <p className = 'text-mainOrange text-4xl font-semibold text-center'>Отзывы</p>
           </div>
-            <div className='text-white flex  px-60 flex flex-col pb-5'>
+            <div className='text-white flex  px-10 md:px-16 lg:px-60 flex flex-col pb-5'>
               <div className='flex items-left '>
               <img className = "h-10 w-10"src = {andry} alt = "андрей"/>
                 <div className="rating-result py-3 pl-5 ">
@@ -132,7 +132,7 @@ function Product() {
                   <p className = 'text-base pt-5'>05 Января, 2023</p>
                 </div>
               </div>
-              <div className='text-white flex  pl-60 flex flex-col pb-20'>
+              <div className='text-white flex  px-10 md:px-16 lg:px-60 flex flex-col pb-20'>
               <div className='flex items-left '>
               <img className = "h-10 w-10"src = {jackline} alt = "жаклин"/>
                 <div className="rating-result py-3 pl-5 ">

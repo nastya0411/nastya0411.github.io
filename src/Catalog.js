@@ -112,7 +112,7 @@ function Catalog()
   return(
     <div className = "font-medium bg-black tracking-[.25rem]">
         <Header />
-        <div className = "object-left-top text-2xl text-mainOrange tracking-[.4rem] px-64 flex flex-row gap-x-9">
+        <div className = "object-center-top px-52 md:px-64 lg:px-64 text-2xl text-mainOrange tracking-[.4rem] px-64 flex flex-row gap-x-9 mt-6 md:mt-6 lg:mt-0">
         <RouterLink to = '/'><p >Главная </p></RouterLink>
           <p > / </p>
           <RouterLink to = '/catalog'><p >Каталог</p></RouterLink>
@@ -138,7 +138,8 @@ function catalogCards()
     });
 
     return (
-        <div className="grid grid-cols-4 gap-7 fade-out-siblings pb-5 relative flex justify-items-center px-80">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 md:gap-x-64 lg:gap-x-7  gap-y-7 md:gap-y-10 lg:gap-y-7 fade-out-siblings pb-5
+         relative flex justify-items-center px- 0 md:px-40 lg:px-80">
             {catalogCardsJsx}
       </div>
     );

@@ -8,7 +8,7 @@
 
 .burger-menu__line_open { transform: rotate(-45deg); }
 
-.burger-menu__nav { position: absolute; margin-right: -300px; margin-top: 40px; top: 100%;  width: 715px; height: 400px; background: #000000; box-shadow: 0 0 10px rgba(250, 249, 249, 0.2);
+.burger-menu__nav { position: absolute; margin-right: -325px; margin-top: 40px; top: 100%;  width: 715px; height: 400px; background: #000000; box-shadow: 0 0 10px rgba(250, 249, 249, 0.2);
      display: flex; flex-direction: column; justify-content: center; padding: 20px; opacity: 0; pointer-events: none;  
      transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s; }
 

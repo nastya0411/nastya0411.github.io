@@ -26,7 +26,7 @@ function Basket(){
     return(
         <div className = "font-medium bg-black tracking-[.25rem] grid text-white">
         <Header />
-          <div className="flex flex-col py-8">
+          <div className="flex flex-col py-8 ">
             {cartCardsJsx}
           </div>
             <div className="flex flex-col items-center pt-1"><p className='p-7 border-t border-mainOrange w-4/5 rounded-sm text-center font-extralight text-3xl'>

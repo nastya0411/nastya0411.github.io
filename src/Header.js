@@ -36,7 +36,7 @@ function Header()
                         {links.map((elem, i) => { return <Link text={elem.text} url={elem.url} key={i} /> })}
                     </nav>
                 </div>
-                    <div className="flex sm:inline-flex md:hidden lg:hidden">
+                    <div className="flex sm:inline-flex md:hidden lg:hidden -ms-12">
                         <BurgerMenu />
                     </div>
                 <div className = "flex gap-4">

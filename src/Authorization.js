@@ -33,7 +33,7 @@ function Authorization(){
             </div>
             <div className="flex justify-center py-6">
                 <button className="w-84 p-4 border hover:bg-mainOrange hover:text-white hover:border-transparent hover:ease-in-out duration-300 rounded-xl text-2xl tracking-[.25rem] ">
-                    <Link to="/reg">
+                    <Link to="/">
                         Зарегистрироваться
                     </Link>
                 </button>
